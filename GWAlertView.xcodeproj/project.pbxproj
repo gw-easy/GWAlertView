@@ -34,6 +34,7 @@
 		C45241531E486EDB008AC566 /* GWAlertViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C45241521E486EDB008AC566 /* GWAlertViewUITests.m */; };
 		C4AD5C5B1FF0E96100F81BC2 /* GW_AnimatedGIFImageSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AD5C591FF0E96100F81BC2 /* GW_AnimatedGIFImageSerialization.m */; };
 		C4AD5C5D1FF0F45C00F81BC2 /* 小太阳.gif in Resources */ = {isa = PBXBuildFile; fileRef = C4AD5C5C1FF0F45B00F81BC2 /* 小太阳.gif */; };
+		C4AD5C5F1FF0FD3300F81BC2 /* alertyanshi.gif in Resources */ = {isa = PBXBuildFile; fileRef = C4AD5C5E1FF0FD3300F81BC2 /* alertyanshi.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,7 @@
 		C4AD5C591FF0E96100F81BC2 /* GW_AnimatedGIFImageSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW_AnimatedGIFImageSerialization.m; sourceTree = "<group>"; };
 		C4AD5C5A1FF0E96100F81BC2 /* GW_AnimatedGIFImageSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW_AnimatedGIFImageSerialization.h; sourceTree = "<group>"; };
 		C4AD5C5C1FF0F45B00F81BC2 /* 小太阳.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "小太阳.gif"; sourceTree = "<group>"; };
+		C4AD5C5E1FF0FD3300F81BC2 /* alertyanshi.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = alertyanshi.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +212,7 @@
 		C452412C1E486EDB008AC566 /* GWAlertView */ = {
 			isa = PBXGroup;
 			children = (
+				C4AD5C5E1FF0FD3300F81BC2 /* alertyanshi.gif */,
 				C403B0041E486F6D0064D38D /* GWAlertView */,
 				C403B0071E486F6D0064D38D /* SDWebImage */,
 				C45241301E486EDB008AC566 /* AppDelegate.h */,
@@ -360,6 +363,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4AD5C5F1FF0FD3300F81BC2 /* alertyanshi.gif in Resources */,
 				C452413D1E486EDB008AC566 /* LaunchScreen.storyboard in Resources */,
 				C452413A1E486EDB008AC566 /* Assets.xcassets in Resources */,
 				C45241381E486EDB008AC566 /* Main.storyboard in Resources */,
