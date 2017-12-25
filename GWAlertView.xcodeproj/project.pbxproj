@@ -32,6 +32,8 @@
 		C452413D1E486EDB008AC566 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C452413B1E486EDB008AC566 /* LaunchScreen.storyboard */; };
 		C45241481E486EDB008AC566 /* GWAlertViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C45241471E486EDB008AC566 /* GWAlertViewTests.m */; };
 		C45241531E486EDB008AC566 /* GWAlertViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C45241521E486EDB008AC566 /* GWAlertViewUITests.m */; };
+		C4AD5C5B1FF0E96100F81BC2 /* GW_AnimatedGIFImageSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AD5C591FF0E96100F81BC2 /* GW_AnimatedGIFImageSerialization.m */; };
+		C4AD5C5D1FF0F45C00F81BC2 /* 小太阳.gif in Resources */ = {isa = PBXBuildFile; fileRef = C4AD5C5C1FF0F45B00F81BC2 /* 小太阳.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +105,9 @@
 		C452414E1E486EDB008AC566 /* GWAlertViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GWAlertViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C45241521E486EDB008AC566 /* GWAlertViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GWAlertViewUITests.m; sourceTree = "<group>"; };
 		C45241541E486EDB008AC566 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4AD5C591FF0E96100F81BC2 /* GW_AnimatedGIFImageSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW_AnimatedGIFImageSerialization.m; sourceTree = "<group>"; };
+		C4AD5C5A1FF0E96100F81BC2 /* GW_AnimatedGIFImageSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW_AnimatedGIFImageSerialization.h; sourceTree = "<group>"; };
+		C4AD5C5C1FF0F45B00F81BC2 /* 小太阳.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "小太阳.gif"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +138,9 @@
 		C403B0041E486F6D0064D38D /* GWAlertView */ = {
 			isa = PBXGroup;
 			children = (
+				C4AD5C5C1FF0F45B00F81BC2 /* 小太阳.gif */,
+				C4AD5C5A1FF0E96100F81BC2 /* GW_AnimatedGIFImageSerialization.h */,
+				C4AD5C591FF0E96100F81BC2 /* GW_AnimatedGIFImageSerialization.m */,
 				C403B0051E486F6D0064D38D /* GWAlertView.h */,
 				C403B0061E486F6D0064D38D /* GWAlertView.m */,
 			);
@@ -305,7 +313,7 @@
 		C45241221E486EDB008AC566 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = gw;
 				TargetAttributes = {
 					C45241291E486EDB008AC566 = {
@@ -355,6 +363,7 @@
 				C452413D1E486EDB008AC566 /* LaunchScreen.storyboard in Resources */,
 				C452413A1E486EDB008AC566 /* Assets.xcassets in Resources */,
 				C45241381E486EDB008AC566 /* Main.storyboard in Resources */,
+				C4AD5C5D1FF0F45C00F81BC2 /* 小太阳.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +405,7 @@
 				C403B02A1E486F6D0064D38D /* MKAnnotationView+WebCache.m in Sources */,
 				C403B02B1E486F6D0064D38D /* NSData+ImageContentType.m in Sources */,
 				C452412F1E486EDB008AC566 /* main.m in Sources */,
+				C4AD5C5B1FF0E96100F81BC2 /* GW_AnimatedGIFImageSerialization.m in Sources */,
 				C403B0311E486F6D0064D38D /* SDWebImageManager.m in Sources */,
 				C403B02E1E486F6D0064D38D /* SDWebImageDecoder.m in Sources */,
 				C403B02C1E486F6D0064D38D /* SDImageCache.m in Sources */,
@@ -462,7 +472,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -470,7 +482,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -510,7 +526,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -518,7 +536,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -549,6 +571,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = E8X5ZQ3QPM;
 				INFOPLIST_FILE = GWAlertView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = gw.GWAlertView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -561,6 +584,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = E8X5ZQ3QPM;
 				INFOPLIST_FILE = GWAlertView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = gw.GWAlertView;
 				PRODUCT_NAME = "$(TARGET_NAME)";

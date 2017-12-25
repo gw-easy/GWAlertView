@@ -16,7 +16,7 @@
 
 #define SubTitleHeight 20
 
-@interface GWAlertView()<UIWebViewDelegate>
+@interface GWAlertView()<UIWebViewDelegate,UITextFieldDelegate>
 {
     BOOL _ifTranslated;
 }
@@ -58,14 +58,18 @@ CGFloat SubTitlePadding;
 #pragma mark - 原有的方法，未动过
 
 
-- (instancetype)initWithIcon:(UIImage *)icon message:(NSString *)message delegate:(id<GWAlertViewDelegate>)delegate buttonTitles:(NSString *)buttonTitles, ...
+- (instancetype)initWithIcon:(NSString *)icon message:(NSString *)message delegate:(id<GWAlertViewDelegate>)delegate buttonTitles:(NSString *)buttonTitles, ...
 {
     self = [super initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
     if (self)
     {
         [self setBackgroundColor:RGBACOLOR(0, 0, 0, 0.3)];
         
-        _icon               = icon;
+        if ([self isConfile:icon]) {
+            _icon = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:icon ofType:nil]];
+        }else{
+            _icon               = [UIImage imageNamed:icon];
+        }
         _message            = message;
         _delegate           = delegate;
         _buttonArray        = [NSMutableArray array];
@@ -100,14 +104,18 @@ CGFloat SubTitlePadding;
     return self;
 }
 
-- (instancetype)initWithIcon:(UIImage *)icon message:(NSString *)message subtitle:(NSString *)subtitle delegate:(id<GWAlertViewDelegate>)delegate buttonTitles:(NSString *)buttonTitles, ...
+- (instancetype)initWithIcon:(NSString *)icon message:(NSString *)message subtitle:(NSString *)subtitle delegate:(id<GWAlertViewDelegate>)delegate buttonTitles:(NSString *)buttonTitles, ...
 {
 	self = [super initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
 	if (self)
 	{
 		[self setBackgroundColor:RGBACOLOR(0, 0, 0, 0.3)];
 		
-		_icon               = icon;
+        if ([self isConfile:icon]) {
+            _icon = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:icon ofType:nil]];
+        }else{
+            _icon               = [UIImage imageNamed:icon];
+        }
 		_message            = message;
 		_delegate           = delegate;
 		_buttonArray        = [NSMutableArray array];
@@ -684,8 +692,9 @@ CGFloat SubTitlePadding;
 
     
     _verfyTextField = [[UITextField alloc] initWithFrame:CGRectMake(CGRectGetMaxX(_verifyWebView.frame) + 15, _verifyWebView.frame.size.height, 100, 44)];
+    _verfyTextField.delegate = self;
     _verfyTextField.borderStyle = UITextBorderStyleRoundedRect;
-    
+    _verfyTextField.returnKeyType = UIReturnKeyDone;
     
     _refreshVerifyImgBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     _refreshVerifyImgBtn.frame = CGRectMake(_verifyWebView.frame.size.width, CGRectGetMaxY(_verifyWebView.frame) + 5, 115, 23);
@@ -722,6 +731,10 @@ CGFloat SubTitlePadding;
     
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return YES;
+}
 
 -(void)certainBtnClick{
     if (_CertainBtnClickBlock){
@@ -783,13 +796,17 @@ CGFloat SubTitlePadding;
 }
 
 #pragma mark - 仅有图片背景的alert
--(instancetype)initWithImage:(UIImage *)image delegate:(id<GWAlertViewDelegate>)delegate buttonTitles:(NSString *)buttonTitles, ...
+-(instancetype)initWithImage:(NSString *)image delegate:(id<GWAlertViewDelegate>)delegate buttonTitles:(NSString *)buttonTitles, ...
 {
     self = [super initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
     if (self)
     {
         [self setBackgroundColor:RGBACOLOR(0, 0, 0, 0.3)];
-        _backgroundImage = image;
+        if ([self isConfile:image]) {
+            _backgroundImage = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:image ofType:nil]];
+        }else{
+            _backgroundImage               = [UIImage imageNamed:image];
+        }
         _delegate           = delegate;
         _buttonArray        = [NSMutableArray array];
         _buttonTitleArray   = [NSMutableArray array];
@@ -837,6 +854,11 @@ CGFloat SubTitlePadding;
     return self;
 }
 
-
+- (BOOL)isConfile:(NSString *)name{
+    if ([name hasSuffix:@".jpg"] || [name hasSuffix:@".png"] || [name hasSuffix:@".gif"]) {
+        return YES;
+    }
+    return NO;
+}
 
 @end

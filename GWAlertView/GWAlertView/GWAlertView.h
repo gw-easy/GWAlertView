@@ -27,14 +27,14 @@
 
 @property (assign, nonatomic) int taag;
 //头像下加入一条信息
-- (instancetype)initWithIcon:(UIImage *)icon message:(NSString *)message delegate:(id<GWAlertViewDelegate>)delegate buttonTitles:(NSString *)buttonTitles, ...;
-//头像下加入两条信息
-- (instancetype)initWithIcon:(UIImage *)icon title:(NSString *)title subtitle:(NSString *)subtitle delegate:(id<GWAlertViewDelegate>)delegate buttonTitles:(NSString *)buttonTitles, ...;
+- (instancetype)initWithIcon:(NSString *)iconStr message:(NSString *)message delegate:(id<GWAlertViewDelegate>)delegate buttonTitles:(NSString *)buttonTitles, ...;
 
-- (instancetype)initWithIcon:(UIImage *)icon message:(NSString *)message subtitle:(NSString *)subtitle delegate:(id<GWAlertViewDelegate>)delegate buttonTitles:(NSString *)buttonTitles, ...;
+//头像下加入两条信息
+
+- (instancetype)initWithIcon:(NSString *)iconStr message:(NSString *)message subtitle:(NSString *)subtitle delegate:(id<GWAlertViewDelegate>)delegate buttonTitles:(NSString *)buttonTitles, ...;
 
 //仅仅是图片背景的alert
-- (instancetype)initWithImage:(UIImage *)image delegate:(id<GWAlertViewDelegate>)delegate buttonTitles:(NSString *)buttonTitles, ...;
+- (instancetype)initWithImage:(NSString *)imageStr delegate:(id<GWAlertViewDelegate>)delegate buttonTitles:(NSString *)buttonTitles, ...;
 
 //中间文字大，上下文字小
 - (instancetype)initWithMessage1:(NSString *)message1 message2:(NSString *)message2 subtitle:(NSString *)subtitle delegate:(id<GWAlertViewDelegate>)delegate buttonTitles:(NSString *)buttonTitles, ...;
@@ -42,6 +42,8 @@
 //带有textField的block，分享得红包成功后弹出输入验证码时所用
 -(instancetype)initTextFieldAlertWithMessage:(NSString *)message ImageUrl:(NSString *)imgUrl CertainBtnClickBlock:(void (^)(NSString *text))certainBtnClickBlock;
 
+//展示
 - (void)show;
+//展示在哪个view上
 -(void)showInView:(UIView *)view;
 @end
