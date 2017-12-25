@@ -4,3 +4,4 @@
   * 添加验证码提示框
   
 ## 演示视图
+![演示视图](https://raw.githubusercontent.com/gw-update-free/GWAlertView/master/GWAlertView/alertyanshi.gif)
